@@ -1,0 +1,308 @@
+/* Reiniciar márgenes y rellenos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Estilos del encabezado */
+header {
+    background: white;
+    color: #333;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.logo a {
+    color: inherit; /* Mantiene el color del encabezado */
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-contact {
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-contact:hover {
+    background-color: #555;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('Resources/Riego_Main.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro superpuesto */
+}
+
+.hero-content {
+    z-index: 1;
+    text-align: left;
+    max-width: 800px;
+    padding-left: 50px;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.btn-view-services {
+    background: #28a745;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn-view-services:hover {
+    background: #218838;
+}
+
+/* Secciones de información */
+.info-section {
+    padding: 50px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.info-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.info-section p {
+    font-size: 18px;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Sección de Proyectos */
+.proyectos-section {
+    padding: 50px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.proyectos-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.proyecto {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+/* Invertir la dirección solo para el Proyecto 2 */
+.proyectos-section .proyecto:nth-of-type(2) {
+    flex-direction: row-reverse; /* Imagen a la izquierda, texto a la derecha */
+}
+
+.proyecto-descripcion {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.proyecto-descripcion h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.proyecto-descripcion p {
+    font-size: 16px;
+    color: #555;
+}
+
+.proyecto-imagen {
+    flex: 1;
+    text-align: center;
+}
+
+.proyecto-imagen img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Sección de productos */
+.services {
+    padding: 50px 0;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.services h2 {
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 85%;
+    margin: auto;
+}
+
+.service-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Estilos para los enlaces dentro de los recuadros de productos */
+.service-item {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    color: #333; /* Color del texto */
+    text-decoration: none; /* Elimina el subrayado */
+}
+
+.service-item h3, .service-item p {
+    color: inherit; /* Hereda el color del elemento padre */
+}
+
+.service-item:hover {
+    text-decoration: none; /* Mantiene sin subrayado al pasar el mouse */
+}
+
+.service-item h3:hover, .service-item p:hover {
+    color: #333; /* Mantiene el color sin subrayado en hover */
+}
+
+.service-item h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.service-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Footer */
+footer {
+    background-color: rgb(79, 105, 77); /* Fondo verde */
+    color: white; /* Texto en blanco */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 85%;
+    margin: auto;
+    padding: 20px 0;
+    color: white; /* Texto en blanco */
+    border-top: 1px solid rgba(255, 255, 255, 0.3); /* Línea superior */
+    margin-top: 50px;
+}
+
+.footer-left h3, .footer-right h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-left ul, .footer-center ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-left ul li, .footer-center ul li {
+    margin-bottom: 10px;
+}
+
+.footer-left ul li a, .footer-center ul li a {
+    color: white; /* Enlaces en blanco */
+    text-decoration: none;
+}
+
+.footer-left ul li a:hover, .footer-center ul li a:hover {
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+}
+
+.footer-right .social-icons a img {
+    width: 40px;
+    height: 40px;
+    filter: brightness(0) invert(1); /* Para que los íconos se vean bien en el fondo oscuro */
+}
+
+.footer-contact {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+    border-top: 1px solid rgb(255, 255, 255);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+    color: white;
+}
+
+.footer-center {
+    margin-top: 50px;
+}
